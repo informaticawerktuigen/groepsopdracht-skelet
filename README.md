@@ -1,3 +1,6 @@
+[![Artikel compileert](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/compilation.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/compilation.yml)
+[![Artikel voldoet aan woordlimiet](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/word_count.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/word_count.yml)
+
 # Groepsopdracht
 
 Welkom op jullie GitHub repository voor de groepsopdracht van Informatica Werktuigen!
