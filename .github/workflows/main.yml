@@ -21,12 +21,13 @@ jobs:
     steps:
       - name: Install necessary packages for compiling Latex code
         run: |
-          sudo apt-get install texlive-latex-base
-          sudo apt-get install texlive-latex-recommended
-          sudo apt-get install texlive-latex-extra
-          sudo apt-get install texlive-fonts-recommended
-          sudo apt-get install texlive-fonts-extra
-          sudo apt-get install texlive-lang-european
+          sudo apt-get install texlive-latex-base \
+              texlive-latex-recommended \
+              texlive-latex-extra \
+              texlive-fonts-recommended \
+              texlive-fonts-extra \
+              texlive-lang-european \
+              latexmk
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
