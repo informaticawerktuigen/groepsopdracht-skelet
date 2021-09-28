@@ -5,10 +5,14 @@ name: word_count
 on:
   push:
     branches: [ master ]
-    paths: 'tekst/**'
+    paths:
+      - 'tekst/**'
+      - '.github/**'
   pull_request:
     branches: [ master ]
-    paths: 'tekst/**'
+    paths:
+      - 'tekst/**'
+      - '.github/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,8 +38,10 @@ jobs:
           if cat word_count.txt | egrep -q "Words in text: 2([0-1][0-9][0-9]|200)" ;
           then
               echo "Proficiat! Het artikel voldoet aan het vereiste aantal woorden!"
+              exit 0
           else
               echo "Het artikel voldoet nog niet aan het vereiste aantal woorden..."
+              exit 1
           fi
       
       - name: Upload word count

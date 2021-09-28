@@ -5,10 +5,14 @@ name: compilation
 on:
   push:
     branches: [ master ]
-    paths: 'tekst/**'
+    paths:
+      - 'tekst/**'
+      - '.github/**'
   pull_request:
     branches: [ master ]
-    paths: 'tekst/**'
+    paths:
+      - 'tekst/**'
+      - '.github/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,7 +40,7 @@ jobs:
       - name: Compile Latex article
         run: |
           cd tekst
-          latexmk -pdf atikel.tex
+          latexmk -pdf artikel.tex
 
       - name: Upload PDF article
         uses: actions/upload-artifact@v2
