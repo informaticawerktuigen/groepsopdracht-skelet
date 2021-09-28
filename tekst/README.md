@@ -8,10 +8,7 @@ Deze twee bestanden mogen niet hernoemd worden, maar jullie mogen wel andere bes
 Zorg er steeds voor dat jullie artikel altijd compileerbaar is door middel van de volgende commando's:
 
 ```bash
-pdflatex atikel.tex
-bibtex artikel
-pdflatex atikel.tex
-pdflatex atikel.tex
+latexmk -pdf atikel.tex
 ```
 
 Deze map mag **geen door Latex gegenereerde bestanden** bevatten!
