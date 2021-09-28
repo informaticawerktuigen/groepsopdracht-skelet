@@ -1,4 +1,5 @@
 [![Artikel compileert](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/compilation.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/compilation.yml)
+[![Geen tijdelijke LaTeX-bestanden](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/auxiliary.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/auxiliary.yml)
 [![Artikel voldoet aan woordlimiet](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/word_count.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/word_count.yml)
 
 
@@ -28,10 +29,10 @@ Welkom op jullie GitHub repository voor de groepsopdracht van Informaticawerktui
 
 ## GitHub badges
 
-Bovenaan deze README worden twee GitHub badges getoond.
+Bovenaan deze README.md worden drie GitHub badges getoond.
 GitHub badges worden gebruikt om interessante informatie over de repository weer te geven, bv. of de code compileert, of alle testen slagen etc.
 
-In deze repository geven ze aan of de LaTeX-code voor het artikel compileert en of er voldaan is aan de woordlimiet.
+In deze repository geven ze aan of de LaTeX-code voor het artikel compileert, of er geen tijdelijke LaTeX-bestanden gepusht zijn en of er voldaan is aan de woordlimiet.
 Meer informatie hierover zullen jullie vinden in de opgave omtrent het schrijven van het artikel, die in de loop van het semester ter beschikking zal worden gesteld op Toledo.
 Natuurlijk zijn deze badges pas relevant wanneer jullie daadwerkelijk zijn begonnen met het schrijven aan het artikel, en is het niet erg als deze daarvoor falen (`failing`).
 Wanneer jullie het artikel indienen, zullen deze wel moeten slagen (`passing`).
