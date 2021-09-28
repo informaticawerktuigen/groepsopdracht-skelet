@@ -1,0 +1,45 @@
+name: word_count
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+    paths: 'tekst/**'
+  pull_request:
+    branches: [ master ]
+    paths: 'tekst/**'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Install necessary packages for compiling Latex code
+        run: |
+          sudo apt-get install texlive-extra-utils
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      - name: Count words and check whether 2000 <= words <= 2200
+        run: |
+          cd tekst
+          texcount -inc artikel.tex > word_count.txt
+          cat word_count.txt | egrep "Words in text: [0-9]+"
+          if cat word_count.txt | egrep -q "Words in text: 2([0-1][0-9][0-9]|200)" ;
+          then
+              echo "Proficiat! Het artikel voldoet aan het vereiste aantal woorden!"
+          else
+              echo "Het artikel voldoet nog niet aan het vereiste aantal woorden..."
+          fi
+      
+      - name: Upload word count
+        uses: actions/upload-artifact@v2
+        with:
+          name: word_count
+          path: tekst/word_count.txt

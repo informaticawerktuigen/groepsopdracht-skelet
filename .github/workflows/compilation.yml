@@ -1,4 +1,4 @@
-name: CI
+name: compilation
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -37,27 +37,9 @@ jobs:
         run: |
           cd tekst
           latexmk -pdf atikel.tex
-      
-      - name: Count words and check whether 2000 <= words <= 2200
-        run: |
-          cd tekst
-          texcount -inc artikel.tex > word_count.txt
-          cat word_count.txt | egrep "Words in text: [0-9]+"
-          if cat word_count.txt | egrep -q "Words in text: 2([0-1][0-9][0-9]|200)" ;
-          then
-              echo "Proficiat! Het artikel voldoet aan het vereiste aantal woorden!"
-          else
-              echo "Het artikel voldoet nog niet aan het vereiste aantal woorden..."
-          fi
 
       - name: Upload PDF article
         uses: actions/upload-artifact@v2
         with:
           name: artikel
           path: tekst/artikel.pdf
-      
-      - name: Upload word count
-        uses: actions/upload-artifact@v2
-        with:
-          name: word_count
-          path: tekst/word_count.txt
