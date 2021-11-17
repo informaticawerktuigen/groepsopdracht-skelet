@@ -1,6 +1,6 @@
-[![Artikel compileert](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/compilation.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/compilation.yml)
-[![Geen tijdelijke LaTeX-bestanden](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/auxiliary.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/auxiliary.yml)
-[![Artikel voldoet aan woordlimiet](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/word_count.yml/badge.svg)](https://github.com/informaticawerktuigen/groepsopdracht-skelet/actions/workflows/word_count.yml)
+[![Artikel compileert](../../actions/workflows/compilation.yml/badge.svg)](../../actions/workflows/compilation.yml)
+[![Geen tijdelijke LaTeX-bestanden](../../actions/workflows/auxiliary.yml/badge.svg)](../../actions/workflows/auxiliary.yml)
+[![Artikel voldoet aan woordlimiet](../../actions/workflows/word_count.yml/badge.svg)](../../actions/workflows/word_count.yml)
 
 
 # Groepsopdracht
